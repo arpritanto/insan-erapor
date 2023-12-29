@@ -43,6 +43,8 @@ Route::controller(LoginRegisterController::class)->group(function() {
     Route::get('/register/{id}/delete', [LoginRegisterController::class, 'destroy']);
     Route::post('/register/{id}/update', [LoginRegisterController::class, 'update']);
 
+    Route::get('/register2', 'register2')->name('register2');
+
     Route::post('/store', 'store')->name('store');
     Route::get('/login', 'login')->name('login');
     Route::post('/authenticate', 'authenticate')->name('authenticate');
