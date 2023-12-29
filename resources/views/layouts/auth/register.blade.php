@@ -338,7 +338,6 @@
                         <div class="card-body">
                             <div class="table-responsive">
                                 <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
-                                    @yield('container')
                                     <thead>
                                         <tr class="kolom-kedua">
                                             <th style="vertical-align: middle;text-align: center" >Nama</th>

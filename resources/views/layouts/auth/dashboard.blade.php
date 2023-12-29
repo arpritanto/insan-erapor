@@ -9,7 +9,8 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>SB Admin 2 - Tables</title>
+    <title>SD INSAN MULIA</title>
+    <link rel="shortcut icon" href="img/logobg.png">
 
     <!-- Custom fonts for this template -->
     <link href="{{ asset('/vendor/fontawesome-free/css/all.min.css') }}" rel="stylesheet" type="text/css">
@@ -48,7 +49,7 @@
             <li class="nav-item">
                 <a class="nav-link" href="/dashboard">
                     <i class="fas fa-fw fa-tachometer-alt"></i>
-                    <span>Dashboard</span></a>
+                    <span>Table Data Siswa</span></a>
             </li>
 
             <!-- Divider -->
@@ -63,11 +64,11 @@
             <li class="nav-item active">
                 <a class="nav-link" href="/pengetahuan">
                     <i class="fas fa-fw fa-table"></i>
-                    <span>Pengetahuan</span>
+                    <span>Table Daftar Nilai Aspek Pengetahuan</span>
             </a>
             <a class="nav-link" href="/keterampilan">
                 <i class="fas fa-fw fa-table"></i>
-                <span>Keterampilan</span>
+                <span>Table Daftar Nilai Aspek Keterampilan</span>
             </a>
             <a class="nav-link" href="/register">
                 <i class="fas fa-fw fa-table"></i>
@@ -76,7 +77,7 @@
             </li>
 
              <!-- Nav Item - Pages Collapse Menu -->
-            <li class="nav-item">
+            {{-- <li class="nav-item">
                 <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapsePages"
                     aria-expanded="true" aria-controls="collapsePages">
                     <i class="fas fa-fw fa-folder"></i>
@@ -94,7 +95,7 @@
                         <a class="collapse-item" href="blank.html">Blank Page</a>
                     </div>
                 </div>
-            </li>
+            </li> --}}
             <!-- Divider -->
             <hr class="sidebar-divider d-none d-md-block">
 
@@ -328,68 +329,14 @@
                     <div class="card shadow mb-4">
                         <div class="card-header py-3">
                             <div class="d-flex justify-content-between align-items-center">
-                                <h6 class="m-0 font-weight-bold text-primary">Tabel Siswa</h6>
-                                <div class="dropright mb-4">
-                                    <button class="btn btn-primary dropdown-toggle" type="button"
-                                        id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true"
-                                        aria-expanded="false">
-                                        Pilih Tabel
-                                    </button>
-                                    <div class="dropdown-menu animated--fade-in"
-                                        aria-labelledby="dropdownMenuButton">
-                                        <a class="dropdown-item" href="#">PAI</a>
-                                        <a class="dropdown-item" href="#">PPKN</a>
-                                        <a class="dropdown-item" href="#">B.IND</a>
-                                        <a class="dropdown-item" href="#">MAT</a>
-                                        <a class="dropdown-item" href="#">IPA</a>
-                                        <a class="dropdown-item" href="#">IPS</a>
-                                        <a class="dropdown-item" href="#">SBdP</a>
-                                        <a class="dropdown-item" href="#">PJOK</a>
-                                    </div>
-                                    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#ModalTambah">Tambah Data</button>
-                                </div>
+                                @yield('dropdown')
                             </div>
                         </div>
                         
                         <div class="card-body">
                             <div class="table-responsive">
                                 <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
-                                    @yield('container')
-                                    <thead>
-                                        <tr class="kolom-kedua">
-                                            <th style="vertical-align: middle;text-align: center" >No</th>
-                                            <th style="vertical-align: middle;text-align: center" >NISN</th>
-                                            <th style="vertical-align: middle;text-align: center" >Nama</th>
-                                            <th style="vertical-align: middle;text-align: center" >JK</th>
-                                            <th style="vertical-align: middle;text-align: center" >TTL</th>
-                                            <th style="vertical-align: middle;text-align: center" >Tgl Lahir</th>
-                                            <th style="vertical-align: middle;text-align: center" >Agama</th>
-                                            <th style="vertical-align: middle;text-align: center" >Status</th>
-                                            <th style="vertical-align: middle;text-align: center" >Anak Ke-</th>
-                                            <th style="vertical-align: middle;text-align: center" >Alamat</th>
-                                            <th style="vertical-align: middle;text-align: center">Kelas Terima</th>
-                                            <th style="vertical-align: middle;text-align: center">Tgl Terima</th>   
-                                        </tr>
-                                    </thead>
-                                    {{-- <tbody>
-                                        <?php $no = 1;?>
-                                        @foreach($siswa as $s)
-                                        <tr style="text-align: center">
-                                            <td><?php echo $no++; ?></td>
-                                            <td>{{ $s->NISN }}</td>
-                                            <td>{{ $s->nama_siswa }}</td>
-                                            <td>{{ $s->jenis_kelamin }}</td>
-                                            <td>{{ $s->tmp_lahir }}</td>
-                                            <td>{{ $s->tgl_lahir }}</td>
-                                            <td>{{ $s->agama_lahir }}</td>
-                                            <td>{{ $s->status }}</td>
-                                            <td>{{ $s->anak_ke }}</td>
-                                            <td>{{ $s->alamat }}</td>
-                                            <td>{{ $s->kls_terima }}</td>
-                                            <td>{{ $s->tgl_terima }}</td>
-                                        </tr>
-                                        @endforeach
-                                    </tbody> --}}
+                                    @yield('table-content')
                                 </table>
                             </div>
                         </div>
@@ -433,7 +380,7 @@
                         <span aria-hidden="true">×</span>
                     </button>
                 </div>
-                <div class="modal-body">Select "Logout" below if you are ready to end your current session.</div>
+                <div class="modal-body">Pilih "Logout" di bawah jika Anda siap untuk mengakhiri sesi Anda saat ini..</div>
                 <div class="modal-footer">
                     <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancel</button>
                     <a class="dropdown-item" href="{{ route('logout') }}"
@@ -451,144 +398,7 @@
     <!-- Modal Tambah -->
     <div class="modal fade" id="ModalTambah" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
         <div class="modal-dialog" role="document">
-            <form method="POST" action="hp/create" autocomplete="off" class="sign-up-form">
-                @csrf
-                <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title" id="exampleModalLabel">Tambah Data</h5>
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                    <span aria-hidden="true">&times;</span>
-                    </button>
-                </div>
-        
-                <div class="modal-body">
-                    <div class="mb-3">
-                        <label for="exampleInputEmail1" class="form-label">NISN</label>
-                        <input
-                            type="text"
-                            minlength="10"
-                            class="form-control"
-                            autocomplete="off"
-                            name="NISN"
-                            required
-                          />
-                    </div>
-                    <div class="mb-3">
-                        <label for="exampleInputPassword1" class="form-label">Nama Siswa</label>
-                        <input
-                            type="text"
-                            class="form-control"
-                            autocomplete="off"
-                            name="nama siswa"
-                            required
-                          />
-                    </div>
-                    <div class="mb-3">
-                        <label for="exampleInputPassword1" class="form-label">Jenis Kelamin</label>
-                        <input
-                            type="text"
-                            minlength="1"
-                            class="form-control"
-                            autocomplete="off"
-                            name="jk"
-                            required
-                          />
-                    </div>
-                    <div class="mb-3">
-                        <label for="exampleInputPassword1" class="form-label">Tempat Lahir</label>
-                        <input
-                            type="text"
-                            minlength=""
-                            class="form-control"
-                            autocomplete="off"
-                            name="tempat lahir"
-                            required
-                          />
-                    </div>
-                    <div class="mb-3">
-                        <label for="exampleInputPassword1" class="form-label">Tanggal Lahir</label>
-                        <input
-                            type="date"
-                            minlength=""
-                            class="form-control"
-                            autocomplete="off"
-                            name="tanggal lahir"
-                            required
-                          />
-                    </div>
-                    <div class="mb-3">
-                        <label for="exampleInputPassword1" class="form-label">Agama</label>
-                        <input
-                            type="text"
-                            minlength=""
-                            class="form-control"
-                            autocomplete="off"
-                            name="agama"
-                            required
-                          />
-                    </div>
-                    <div class="mb-3">
-                        <label for="exampleInputPassword1" class="form-label">Status</label>
-                        <input
-                            type="text"
-                            minlength=""
-                            class="form-control"
-                            autocomplete="off"
-                            name="status"
-                            required
-                          />
-                    </div>
-                    <div class="mb-3">
-                        <label for="exampleInputPassword1" class="form-label">Anak Ke-</label>
-                        <input
-                            type="text"
-                            minlength=""
-                            class="form-control"
-                            autocomplete="off"
-                            name="anakke"
-                            required
-                          />
-                    </div>
-                    <div class="mb-3">
-                        <label for="exampleInputPassword1" class="form-label">Alamat</label>
-                        <input
-                            type="text"
-                            minlength=""
-                            class="form-control"
-                            autocomplete="off"
-                            name="anakke"
-                            required
-                          />
-                    </div>
-                    <div class="mb-3">
-                        <label for="exampleInputPassword1" class="form-label">Kelas Terima</label>
-                        <input
-                            type="text"
-                            minlength=""
-                            class="form-control"
-                            autocomplete="off"
-                            name="kelasterima"
-                            required
-                          />
-                    </div>
-                    <div class="mb-3">
-                        <label for="exampleInputPassword1" class="form-label">Tanggal Terima</label>
-                        <input
-                            type="date"
-                            minlength=""
-                            class="form-control"
-                            autocomplete="off"
-                            name="tglterima"
-                            required
-                          />
-                    </div>
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                    <button type="submit" value="Sign Up" class="btn btn-primary">Simpan</button>
-                </div>
-                </div>
-            </form>
+            @yield('add')
         </div>
     </div>
 

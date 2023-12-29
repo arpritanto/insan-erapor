@@ -58,9 +58,9 @@
             <div class="text-slider">
               <div class="text-wrap">
                 <div class="text-group">
-                  <h2>Everything in one place.</h2>
-                  <h2>Customize as you like.</h2>
-                  <h2>Say hello to the future.</h2>
+                  <h2>SD INSAN MULIA.</h2>
+                  <h2>E-Raport.</h2>
+                  <h2>Hello to the future.</h2>
                 </div>
               </div>
 

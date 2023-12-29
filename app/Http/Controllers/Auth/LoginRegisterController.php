@@ -5,8 +5,10 @@ namespace App\Http\Controllers\Auth;
 use App\Models\User;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
+use App\Models\Register;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Hash;
+use Illuminate\Support\Facades\DB;
 
 class LoginRegisterController extends Controller
 {
@@ -20,9 +22,11 @@ class LoginRegisterController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
+
     public function register()
     {
-        return view('layouts.auth.register');
+        $user = DB::table('users')->get();
+        return view('auth.register', ['user' => $user]);
     }
 
     public function register2()
@@ -32,12 +36,14 @@ class LoginRegisterController extends Controller
 
     public function pengetahuan()
     {
-        return view('layouts.auth.pengetahuan');
+        $pengetahuan = DB::table('pengetahuan')->get();
+        return view('formpengetahuan.index', ['pengetahuan' => $pengetahuan]);
     }
 
     public function keterampilan()
     {
-        return view('layouts.auth.keterampilan');
+        $keterampilan = DB::table('keterampilan')->get();
+        return view('formketerampilan.index', ['keterampilan' => $keterampilan]);
     }
 
     /**
@@ -63,7 +69,7 @@ class LoginRegisterController extends Controller
         // $credentials = $request->only('email', 'password');
         // Auth::attempt($credentials);
         // $request->session()->regenerate();
-        return redirect()->route('dashboard');
+        return redirect()->route('register');
         // ->withSuccess('You have successfully registered & logged in!');
     }
 
@@ -112,7 +118,8 @@ class LoginRegisterController extends Controller
     {
         if(Auth::check())
         {
-            return view('layouts.auth.dashboard');
+            $siswa = DB::table('siswa')->get();
+            return view('dashboard.index', ['siswa' => $siswa]);
         }
         
         return redirect()->route('login')
@@ -136,4 +143,17 @@ class LoginRegisterController extends Controller
             ->withSuccess('You have logged out successfully!');;
     }    
 
+    public function destroy($id)
+	{
+		$user = Register::find($id);
+		$user->delete();
+		return redirect('/register');
+	}
+
+    public function update($id, Request $request)
+	{
+		$user = Register::find($id);
+		$user->update($request->except(['_token','submit']));
+		return redirect('/register');
+	}
 }
