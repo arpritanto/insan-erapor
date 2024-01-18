@@ -1,5 +1,6 @@
 @extends('layouts.auth.dashboard')
 
+
 @section('dropdown')
     <h6 class="m-0 font-weight-bold text-primary">Tabel Siswa</h6>
     <div class="dropright mb-4">
@@ -58,164 +59,10 @@
             <td>{{ $s->kls_terima }}</td>
             <td>{{ $s->tgl_terima }}</td>
             <td style="text-align: center;">
-                <button type="button" data-toggle="modal" data-target="#ModalEdit{{ $s->NISN }}"
+                <button type="button" class="edit-btn" data-toggle="modal" data-target="#ModalEdit{{ $s->NISN }}"
                     style="background: none; border: none; cursor: pointer;">
                     <img src="./img/editbg.png" alt="Edit" style="width: 30px; height: 30px;">
                 </button>
-
-                <div class="modal fade" id="ModalEdit{{ $s->NISN }}" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                    <div class="modal-dialog" role="document">
-                        <form method="POST" action="/dashboard/{{ $s->NISN }}/edit" autocomplete="off" class="sign-up-form">
-                            @csrf
-                            <div class="modal-content">
-                                <div class="modal-header">
-                                    <h5 class="modal-title" id="exampleModalLabel">Edit Data</h5>
-                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                    <span aria-hidden="true">&times;</span>
-                                    </button>
-                                </div>
-                    
-                                <div class="modal-body">
-                                    <div class="mb-3">
-                                        <label for="exampleInputEmail1" class="form-label">NISN</label>
-                                        <input
-                                            type="text"
-                                            minlength="10"
-                                            class="form-control"
-                                            autocomplete="off"
-                                            name="NISN"
-                                            value="{{ $s->NISN }}"
-                                            required
-                                        />
-                                    </div>
-                                    <div class="mb-3">
-                                        <label for="exampleInputPassword1" class="form-label">Nama Siswa</label>
-                                        <input
-                                            type="text"
-                                            class="form-control"
-                                            autocomplete="off"
-                                            name="nama siswa"
-                                            value="{{ $s->nama_siswa }}"
-                                            required
-                                        />
-                                    </div>
-                                    <div class="mb-3">
-                                        <label for="exampleInputPassword1" class="form-label">Jenis Kelamin</label>
-                                        <input
-                                            type="text"
-                                            minlength="1"
-                                            class="form-control"
-                                            autocomplete="off"
-                                            name="jenis kelamin"
-                                            value="{{ $s->jenis_kelamin }}"
-                                            required
-                                        />
-                                    </div>
-                                    <div class="mb-3">
-                                        <label for="exampleInputPassword1" class="form-label">Tempat Lahir</label>
-                                        <input
-                                            type="text"
-                                            minlength=""
-                                            class="form-control"
-                                            autocomplete="off"
-                                            name="tmp lahir"
-                                            value="{{ $s->tmp_lahir }}"
-                                            required
-                                        />
-                                    </div>
-                                    <div class="mb-3">
-                                        <label for="exampleInputPassword1" class="form-label">Tanggal Lahir</label>
-                                        <input
-                                            type="date"
-                                            minlength=""
-                                            class="form-control"
-                                            autocomplete="off"
-                                            name="tgl lahir"
-                                            value="{{ $s->tgl_lahir }}"
-                                            required
-                                        />
-                                    </div>
-                                    <div class="mb-3">
-                                        <label for="exampleInputPassword1" class="form-label">Agama</label>
-                                        <input
-                                            type="text"
-                                            minlength=""
-                                            class="form-control"
-                                            autocomplete="off"
-                                            name="agama"
-                                            value="{{ $s->agama }}"
-                                            required
-                                        />
-                                    </div>
-                                    <div class="mb-3">
-                                        <label for="exampleInputPassword1" class="form-label">Status</label>
-                                        <input
-                                            type="text"
-                                            minlength=""
-                                            class="form-control"
-                                            autocomplete="off"
-                                            name="status"
-                                            value="{{ $s->status }}"
-                                            required
-                                        />
-                                    </div>
-                                    <div class="mb-3">
-                                        <label for="exampleInputPassword1" class="form-label">Anak Ke-</label>
-                                        <input
-                                            type="text"
-                                            minlength=""
-                                            class="form-control"
-                                            autocomplete="off"
-                                            name="anak ke"
-                                            value="{{ $s->anak_ke }}"
-                                            required
-                                        />
-                                    </div>
-                                    <div class="mb-3">
-                                        <label for="exampleInputPassword1" class="form-label">Alamat</label>
-                                        <input
-                                            type="text"
-                                            minlength=""
-                                            class="form-control"
-                                            autocomplete="off"
-                                            name="alamat"
-                                            value="{{ $s->alamat }}"
-                                            required
-                                        />
-                                    </div>
-                                    <div class="mb-3">
-                                        <label for="exampleInputPassword1" class="form-label">Kelas Terima</label>
-                                        <input
-                                            type="text"
-                                            minlength=""
-                                            class="form-control"
-                                            autocomplete="off"
-                                            name="kls terima"
-                                            value="{{ $s->kls_terima }}"
-                                            required
-                                        />
-                                    </div>
-                                    <div class="mb-3">
-                                        <label for="exampleInputPassword1" class="form-label">Tanggal Terima</label>
-                                        <input
-                                            type="date"
-                                            minlength=""
-                                            class="form-control"
-                                            autocomplete="off"
-                                            name="tgl terima"
-                                            value="{{ $s->tgl_terima }}"
-                                            required
-                                        />
-                                    </div>
-                                </div>
-                                <div class="modal-footer">
-                                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                                    <button type="submit" value="Sign Up" class="btn btn-primary">Simpan</button>
-                                </div>
-                            </div>
-                        </form>
-                    </div>
-                </div>
 
                 <a href="/dashboard/{{ $s->NISN }}/delete" class="btn btn-danger btn-icon-split">
                 
@@ -226,6 +73,159 @@
                 </a>
             </td>
         </tr>
+        <div class="modal fade" id="ModalEdit{{ $s->NISN }}"  role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+                <form method="POST" action="{{ url('/dashboard/' . $s->NISN . '/edit') }}" autocomplete="off" class="sign-up-form">
+                    @csrf
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="exampleModalLabel">Edit Data</h5>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+            
+                        <div class="modal-body">
+                            <div class="mb-3">
+                                <label for="exampleInputEmail1" class="form-label">NISN</label>
+                                <input
+                                    type="text"
+                                    minlength="10"
+                                    class="form-control"
+                                    autocomplete="off"
+                                    name="NISN"
+                                    value="{{ $s->NISN }}"
+                                    required
+                                />
+                            </div>
+                            <div class="mb-3">
+                                <label for="exampleInputPassword1" class="form-label">Nama Siswa</label>
+                                <input
+                                    type="text"
+                                    class="form-control"
+                                    autocomplete="off"
+                                    name="nama siswa"
+                                    value="{{ $s->nama_siswa }}"
+                                    required
+                                />
+                            </div>
+                            <div class="mb-3">
+                                <label for="exampleInputPassword1" class="form-label">Jenis Kelamin</label>
+                                <input
+                                    type="text"
+                                    minlength="1"
+                                    class="form-control"
+                                    autocomplete="off"
+                                    name="jenis kelamin"
+                                    value="{{ $s->jenis_kelamin }}"
+                                    required
+                                />
+                            </div>
+                            <div class="mb-3">
+                                <label for="exampleInputPassword1" class="form-label">Tempat Lahir</label>
+                                <input
+                                    type="text"
+                                    minlength=""
+                                    class="form-control"
+                                    autocomplete="off"
+                                    name="tmp lahir"
+                                    value="{{ $s->tmp_lahir }}"
+                                    required
+                                />
+                            </div>
+                            <div class="mb-3">
+                                <label for="exampleInputPassword1" class="form-label">Tanggal Lahir</label>
+                                <input
+                                    type="date"
+                                    minlength=""
+                                    class="form-control"
+                                    autocomplete="off"
+                                    name="tgl lahir"
+                                    value="{{ $s->tgl_lahir }}"
+                                    required
+                                />
+                            </div>
+                            <div class="mb-3">
+                                <label for="exampleInputPassword1" class="form-label">Agama</label>
+                                <input
+                                    type="text"
+                                    minlength=""
+                                    class="form-control"
+                                    autocomplete="off"
+                                    name="agama"
+                                    value="{{ $s->agama }}"
+                                    required
+                                />
+                            </div>
+                            <div class="mb-3">
+                                <label for="exampleInputPassword1" class="form-label">Status</label>
+                                <input
+                                    type="text"
+                                    minlength=""
+                                    class="form-control"
+                                    autocomplete="off"
+                                    name="status"
+                                    value="{{ $s->status }}"
+                                    required
+                                />
+                            </div>
+                            <div class="mb-3">
+                                <label for="exampleInputPassword1" class="form-label">Anak Ke-</label>
+                                <input
+                                    type="text"
+                                    minlength=""
+                                    class="form-control"
+                                    autocomplete="off"
+                                    name="anak ke"
+                                    value="{{ $s->anak_ke }}"
+                                    required
+                                />
+                            </div>
+                            <div class="mb-3">
+                                <label for="exampleInputPassword1" class="form-label">Alamat</label>
+                                <input
+                                    type="text"
+                                    minlength=""
+                                    class="form-control"
+                                    autocomplete="off"
+                                    name="alamat"
+                                    value="{{ $s->alamat }}"
+                                    required
+                                />
+                            </div>
+                            <div class="mb-3">
+                                <label for="exampleInputPassword1" class="form-label">Kelas Terima</label>
+                                <input
+                                    type="text"
+                                    minlength=""
+                                    class="form-control"
+                                    autocomplete="off"
+                                    name="kls terima"
+                                    value="{{ $s->kls_terima }}"
+                                    required
+                                />
+                            </div>
+                            <div class="mb-3">
+                                <label for="exampleInputPassword1" class="form-label">Tanggal Terima</label>
+                                <input
+                                    type="date"
+                                    minlength=""
+                                    class="form-control"
+                                    autocomplete="off"
+                                    name="tgl terima"
+                                    value="{{ $s->tgl_terima }}"
+                                    required
+                                />
+                            </div>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                            <button type="submit" value="Sign Up" class="btn btn-primary">Simpan</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
         @endforeach
     </tbody>
 @endsection
@@ -370,3 +370,12 @@
         </div>
     </form>
 @endsection
+@push('js')
+
+<script>
+    $(document).ready(function() {
+        $('#ModalEdit{{ $s->NISN }}').modal('show');
+    });
+</script>
+    
+@endpush
