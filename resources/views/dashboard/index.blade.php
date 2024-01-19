@@ -268,6 +268,7 @@
                     <input
                         type="text"
                         minlength="1"
+                        maxlength="1"
                         class="form-control"
                         autocomplete="off"
                         name="jenis kelamin"
