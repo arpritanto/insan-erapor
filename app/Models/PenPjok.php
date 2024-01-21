@@ -8,7 +8,7 @@ use Illuminate\Database\Eloquent\Model;
 class PenPjok extends Model
 {
     use HasFactory;
-    protected $primaryKey = 'NISN';
+    protected $primaryKey = 'id';
     public $timestamps = false;
     protected $table = 'p_pjok';
     protected $guarded = [];

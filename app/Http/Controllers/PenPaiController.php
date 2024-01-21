@@ -20,16 +20,16 @@ class PenPaiController extends Controller
 		return redirect('/pengetahuan');
 	}
 
-	public function update($NISN, Request $request)
+	public function update($id, Request $request)
 	{
-		$siswa = PenPai::find($NISN);
+		$siswa = PenPai::find($id);
 		$siswa->update($request->except(['_token','submit']));
 		return redirect('/pengetahuan');
 	}
 
-	public function destroy($NISN)
+	public function destroy($id)
 	{
-		$siswa = PenPai::find($NISN);
+		$siswa = PenPai::find($id);
 		$siswa->delete();
 		return redirect('/pengetahuan');
 	}

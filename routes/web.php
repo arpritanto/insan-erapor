@@ -66,8 +66,14 @@ Route::controller(LoginRegisterController::class)->group(function() {
     // Route::post('/keterampilan/{nisn}/edit',[KeterampilanController::class, 'update']);
     // Route::get('/keterampilan/{nisn}/delete',[KeterampilanController::class, 'destroy']);
 
+    # PAI
     Route::get('/pengetahuan',[PenPaiController::class, 'get']);
     Route::post('/pengetahuan_pai/create',[PenPaiController::class, 'create']);
+    Route::post('/pengetahuan_pai/{id}/edit',[PenPaiController::class, 'update']);
+    Route::get('/pengetahuan_pai/{id}/delete',[PenPaiController::class, 'destroy']);
+
+    #PPKN
+    
 
     // Route::get('/gfg/{a}', 'gfg')->name('gfg');
 });
