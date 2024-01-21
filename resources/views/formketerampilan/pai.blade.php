@@ -2,20 +2,21 @@
 
 @section('dropdown')
     <h6 class="m-0 font-weight-bold text-primary">Tabel Data Keterampilan</h6>
+    <h6 class="m-0 font-weight-bold text-primary">Mata Pelajaran PAI</h6>
     <div class="dropright mb-4">
         <button class="btn btn-primary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown"
             aria-haspopup="true" aria-expanded="false">
             Pilih Tabel
         </button>
         <div class="dropdown-menu animated--fade-in" aria-labelledby="dropdownMenuButton">
-            <a class="dropdown-item" href="#">PAI</a>
-            <a class="dropdown-item" href="#">PPKN</a>
-            <a class="dropdown-item" href="#">B.IND</a>
-            <a class="dropdown-item" href="#">MAT</a>
-            <a class="dropdown-item" href="#">IPA</a>
-            <a class="dropdown-item" href="#">IPS</a>
-            <a class="dropdown-item" href="#">SBdP</a>
-            <a class="dropdown-item" href="#">PJOK</a>
+            <a class="dropdown-item" href="/keterampilan_pai">PAI</a>
+            <a class="dropdown-item" href="/keterampilan_pkn">PPKN</a>
+            <a class="dropdown-item" href="/keterampilan_indo">B.IND</a>
+            <a class="dropdown-item" href="/keterampilan_mat">MAT</a>
+            <a class="dropdown-item" href="/keterampilan_ipa">IPA</a>
+            <a class="dropdown-item" href="/keterampilan_ips">IPS</a>
+            <a class="dropdown-item" href="/keterampilan_sbdp">SBdP</a>
+            <a class="dropdown-item" href="/keterampilan_pjok">PJOK</a>
         </div>
         <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#ModalTambah">Tambah Data</button>
     </div>
@@ -70,8 +71,8 @@
                 <td>{{ $k->k6 }}</td>
                 <td>{{ $k->k7 }}</td>
                 <td>{{ $k->k8 }}</td>
-                {{-- <td>{{ $k->HPA }}</td>
-                <td>{{ $k->PRE }}</td> --}}
+                {{-- <td>{{ $k->HPA }}</td> --}}
+                {{-- <td>{{ $k->PRE }}</td> --}}
                 <td>{{ $k->deskripsi }}</td>
                 <td style="text-align: center;">
                     <button type="button" data-toggle="modal" data-target="#ModalEdit{{ $k->id }}"
@@ -216,9 +217,8 @@
                         required />
                 </div> --}}
                 <div class="mb-3">
-                    <label for="exampleInputPassword1" class="form-label">K-1 [1]</label>
-                    <input type="number" minlength="" maxlength="3" class="form-control" autocomplete="off" name="k1"
-                        required />
+                    <label class="form-label">K-1 [1]</label>
+                    <input type="number" class="form-control" name="k1" id="k1" oninput="HPA();">
                 </div>
                 <div class="mb-3">
                     <label for="exampleInputPassword1" class="form-label">K-2 [1]</label>
@@ -255,11 +255,10 @@
                     <input type="number" minlength="" maxlength="3" class="form-control" autocomplete="off" name="k8"
                         required />
                 </div>
-                {{-- <div class="mb-3">
-                    <label for="exampleInputPassword1" class="form-label">HPA</label>
-                    <input type="number" minlength=""  class="form-control" autocomplete="off" name="hpa"
-                        required />
-                </div> --}}
+                <div class="mb-3">
+                    <label class="form-label">HPA</label>
+                    <input type="text" class="form-control" name="hpa" id="hpa" readonly>
+                </div>
                 {{-- <div class="mb-3">
                     <label for="exampleInputPassword1" class="form-label">PRE</label>
                     <input type="text" minlength="" class="form-control" autocomplete="off" name="pre"
@@ -280,6 +279,15 @@
 @endsection
 
 @push('js')
+
+<script>
+    function(){
+        var k1 = document.getElementById('k1').value;
+        var kali = parseInt(k1) * 3;
+
+        document.getElementById('hpa') = kali.toFixed(0);
+    }
+</script>
     {{-- <script>
         $(document).ready(function() {
             $('#ModalEdit{{ $k->NISN }}').modal('show');
