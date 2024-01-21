@@ -119,57 +119,57 @@
                                 </div>
                                 <div class="mb-3">
                                     <label for="exampleInputPassword1" class="form-label">H-1</label>
-                                    <input type="number" minlength="" class="form-control" autocomplete="off"
+                                    <input type="number" minlength="" maxlength="3" class="form-control" autocomplete="off"
                                         name="H1" value="{{ $p->H1 }}" required />
                                 </div>
                                 <div class="mb-3">
                                     <label for="exampleInputPassword1" class="form-label">H-2</label>
-                                    <input type="number" minlength="" class="form-control" autocomplete="off"
+                                    <input type="number" minlength="" maxlength="3" class="form-control" autocomplete="off"
                                         name="H2" value="{{ $p->H2 }}" required />
                                 </div>
                                 <div class="mb-3">
                                     <label for="exampleInputPassword1" class="form-label">H-3</label>
-                                    <input type="number" minlength="" class="form-control" autocomplete="off"
+                                    <input type="number" minlength="" maxlength="3" class="form-control" autocomplete="off"
                                         name="H3" value="{{ $p->H3 }}" required />
                                 </div>
                                 <div class="mb-3">
                                     <label for="exampleInputPassword1" class="form-label">H-4</label>
-                                    <input type="number" minlength="" class="form-control" autocomplete="off"
+                                    <input type="number" minlength="" maxlength="3" class="form-control" autocomplete="off"
                                         name="H4" value="{{ $p->H4 }}" required />
                                 </div>
                                 <div class="mb-3">
                                     <label for="exampleInputPassword1" class="form-label">H-5</label>
-                                    <input type="number" minlength="" class="form-control" autocomplete="off"
+                                    <input type="number" minlength="" maxlength="3" class="form-control" autocomplete="off"
                                         name="H5" value="{{ $p->H5 }}" required />
                                 </div>
                                 <div class="mb-3">
                                     <label for="exampleInputPassword1" class="form-label">H-6</label>
-                                    <input type="number" minlength="" class="form-control" autocomplete="off"
+                                    <input type="number" minlength="" maxlength="3" class="form-control" autocomplete="off"
                                         name="H6" value="{{ $p->H6 }}" required />
                                 </div>
                                 <div class="mb-3">
                                     <label for="exampleInputPassword1" class="form-label">H-7</label>
-                                    <input type="number" minlength="" class="form-control" autocomplete="off"
+                                    <input type="number" minlength="" maxlength="3" class="form-control" autocomplete="off"
                                         name="H7" value="{{ $p->H7 }}" required />
                                 </div>
                                 <div class="mb-3">
                                     <label for="exampleInputPassword1" class="form-label">H-8</label>
-                                    <input type="number" minlength="" class="form-control" autocomplete="off"
+                                    <input type="number" minlength="" maxlength="3" class="form-control" autocomplete="off"
                                         name="H8" value="{{ $p->H8 }}" required />
                                 </div>
                                 <div class="mb-3">
                                     <label for="exampleInputPassword1" class="form-label">RPH [2]</label>
-                                    <input type="number" minlength="" class="form-control" autocomplete="off"
+                                    <input type="number" minlength="" maxlength="3" class="form-control" autocomplete="off"
                                         name="rph" value="{{ $p->RPH }}" required />
                                 </div>
                                 <div class="mb-3">
                                     <label for="exampleInputPassword1" class="form-label">PTS [1]</label>
-                                    <input type="number" minlength="" class="form-control" autocomplete="off"
+                                    <input type="number" minlength="" maxlength="3" class="form-control" autocomplete="off"
                                         name="pts" value="{{ $p->PTS }}" required />
                                 </div>
                                 <div class="mb-3">
                                     <label for="exampleInputPassword1" class="form-label">PAS [1]</label>
-                                    <input type="number" minlength="" class="form-control" autocomplete="off"
+                                    <input type="number" minlength="" maxlength="3" class="form-control" autocomplete="off"
                                         name="pas" value="{{ $p->PAS }}" required />
                                 </div>
                                 <div class="mb-3">
@@ -223,62 +223,62 @@
                 </div>
                 <div class="mb-3">
                     <label for="exampleInputPassword1" class="form-label">Jenis Kelamin</label>
-                    <input type="text" minlength="1" class="form-control" autocomplete="off" name="jk"
+                    <input type="text" minlength="1" maxlength="1" class="form-control" autocomplete="off" name="jk"
                         required />
                 </div>
                 <div class="mb-3">
                     <label for="exampleInputPassword1" class="form-label">H-1</label>
-                    <input type="number" minlength="" class="form-control" autocomplete="off" name="H1"
+                    <input type="number" minlength="" maxlength="3" class="form-control" autocomplete="off" name="H1"
                         required />
                 </div>
                 <div class="mb-3">
                     <label for="exampleInputPassword1" class="form-label">H-2</label>
-                    <input type="number" minlength="" class="form-control" autocomplete="off" name="H2"
+                    <input type="number" minlength="" maxlength="3" class="form-control" autocomplete="off" name="H2"
                         required />
                 </div>
                 <div class="mb-3">
                     <label for="exampleInputPassword1" class="form-label">H-3</label>
-                    <input type="number" minlength="" class="form-control" autocomplete="off" name="H3"
+                    <input type="number" minlength="" maxlength="3" class="form-control" autocomplete="off" name="H3"
                         required />
                 </div>
                 <div class="mb-3">
                     <label for="exampleInputPassword1" class="form-label">H-4</label>
-                    <input type="number" minlength="" class="form-control" autocomplete="off" name="H4"
+                    <input type="number" minlength="" maxlength="3" class="form-control" autocomplete="off" name="H4"
                         required />
                 </div>
                 <div class="mb-3">
                     <label for="exampleInputPassword1" class="form-label">H-5</label>
-                    <input type="number" minlength="" class="form-control" autocomplete="off" name="H5"
+                    <input type="number" minlength="" maxlength="3" class="form-control" autocomplete="off" name="H5"
                         required />
                 </div>
                 <div class="mb-3">
                     <label for="exampleInputPassword1" class="form-label">H-6</label>
-                    <input type="number" minlength="" class="form-control" autocomplete="off" name="H6"
+                    <input type="number" minlength="" maxlength="3" class="form-control" autocomplete="off" name="H6"
                         required />
                 </div>
                 <div class="mb-3">
                     <label for="exampleInputPassword1" class="form-label">H-7</label>
-                    <input type="number" minlength="" class="form-control" autocomplete="off" name="H7"
+                    <input type="number" minlength="" maxlength="3" class="form-control" autocomplete="off" name="H7"
                         required />
                 </div>
                 <div class="mb-3">
                     <label for="exampleInputPassword1" class="form-label">H-8</label>
-                    <input type="number" minlength="" class="form-control" autocomplete="off" name="H8"
+                    <input type="number" minlength="" maxlength="3" class="form-control" autocomplete="off" name="H8"
                         required />
                 </div>
                 <div class="mb-3">
                     <label for="exampleInputPassword1" class="form-label">RPH [2]</label>
-                    <input type="number" minlength="" class="form-control" autocomplete="off" name="rph"
+                    <input type="number" minlength="" maxlength="3" class="form-control" autocomplete="off" name="rph"
                         required />
                 </div>
                 <div class="mb-3">
                     <label for="exampleInputPassword1" class="form-label">PTS [1]</label>
-                    <input type="number" minlength="" class="form-control" autocomplete="off" name="pts"
+                    <input type="number" minlength="" maxlength="3" class="form-control" autocomplete="off" name="pts"
                         required />
                 </div>
                 <div class="mb-3">
                     <label for="exampleInputPassword1" class="form-label">PAS [1]</label>
-                    <input type="number" minlength="" class="form-control" autocomplete="off" name="pas"
+                    <input type="number" minlength="" maxlength="3" class="form-control" autocomplete="off" name="pas"
                         required />
                 </div>
                 <div class="mb-3">
