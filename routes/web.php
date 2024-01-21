@@ -4,6 +4,13 @@ use App\Http\Controllers\IndexController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Auth\LoginRegisterController;
 use App\Http\Controllers\KeterampilanController;
+use App\Http\Controllers\KetIndoController;
+use App\Http\Controllers\KetIpaController;
+use App\Http\Controllers\KetIpsController;
+use App\Http\Controllers\KetMatController;
+use App\Http\Controllers\KetPaiController;
+use App\Http\Controllers\KetPknController;
+use App\Http\Controllers\KetSbdpController;
 use App\Http\Controllers\PengetahuanController;
 use App\Http\Controllers\PenPaiController;
 use App\Http\Controllers\SiswaController;
@@ -72,8 +79,58 @@ Route::controller(LoginRegisterController::class)->group(function() {
     Route::post('/pengetahuan_pai/{id}/edit',[PenPaiController::class, 'update']);
     Route::get('/pengetahuan_pai/{id}/delete',[PenPaiController::class, 'destroy']);
 
+    // Route::get('/keterampilan',[KetPaiController::class, 'get']);
+    // Route::post('/keterampilan_pai/create',[KetPaiController::class, 'create']);
+    // Route::post('/keterampilan_pai/{id}/edit',[KetPaiController::class, 'update']);
+    // Route::get('/keterampilan_pai/{id}/delete',[KetPaiController::class, 'destroy']);
+
     #PPKN
-    
+    Route::get('/keterampilan',[KetPknController::class, 'get']);
+    Route::post('/keterampilan_pkn/create',[KetPknController::class, 'create']);
+    Route::post('/keterampilan_pkn/{id}/edit',[KetPknController::class, 'update']);
+    Route::get('/keterampilan_pkn/{id}/delete',[KetPknController::class, 'destroy']);
+
+    #INDO
+    Route::get('/keterampilan',[KetIndoController::class, 'get']);
+    Route::post('/keterampilan_indo/create',[KetIndoController::class, 'create']);
+    Route::post('/keterampilan_indo/{id}/edit',[KetIndoController::class, 'update']);
+    Route::get('/keterampilan_indo/{id}/delete',[KetIndoController::class, 'destroy']);
+
+    #IPA
+    Route::get('/keterampilan',[KetIpaController::class, 'get']);
+    Route::post('/keterampilan_ipa/create',[KetIpaController::class, 'create']);
+    Route::post('/keterampilan_ipa/{id}/edit',[KetIpaController::class, 'update']);
+    Route::get('/keterampilan_ipa/{id}/delete',[KetIpaController::class, 'destroy']);
+
+    #IPS
+    Route::get('/keterampilan',[KetIpsController::class, 'get']);
+    Route::post('/keterampilan_ips/create',[KetIpsController::class, 'create']);
+    Route::post('/keterampilan_ips/{id}/edit',[KetIpsController::class, 'update']);
+    Route::get('/keterampilan_ips/{id}/delete',[KetIpsController::class, 'destroy']);
+
+    #PJOK
+    Route::get('/keterampilan',[KetIpsController::class, 'get']);
+    Route::post('/keterampilan_ips/create',[KetIpsController::class, 'create']);
+    Route::post('/keterampilan_ips/{id}/edit',[KetIpsController::class, 'update']);
+    Route::get('/keterampilan_ips/{id}/delete',[KetIpsController::class, 'destroy']);
+
+    #SBDP
+    Route::get('/keterampilan',[KetSbdpController::class, 'get']);
+    Route::post('/keterampilan_sbdp/create',[KetSbdpController::class, 'create']);
+    Route::post('/keterampilan_sbdp/{id}/edit',[KetSbdpController::class, 'update']);
+    Route::get('/keterampilan_sbdp/{id}/delete',[KetSbdpController::class, 'destroy']);
+
+    #MAT
+    Route::get('/keterampilan',[KetMatController::class, 'get']);
+    Route::post('/keterampilan_mat/create',[KetMatController::class, 'create']);
+    Route::post('/keterampilan_mat/{id}/edit',[KetMatController::class, 'update']);
+    Route::get('/keterampilan_mat/{id}/delete',[KetMatController::class, 'destroy']);
+
+    #PAI
+    Route::get('/keterampilan',[KetPaiController::class, 'get']);
+    Route::post('/keterampilan_pai/create',[KetPaiController::class, 'create']);
+    Route::post('/keterampilan_pai/{id}/edit',[KetPaiController::class, 'update']);
+    Route::get('/keterampilan_pai/{id}/delete',[KetPaiController::class, 'destroy']);
 
     // Route::get('/gfg/{a}', 'gfg')->name('gfg');
 });
