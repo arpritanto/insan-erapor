@@ -37,8 +37,8 @@
             <th style="vertical-align: middle;text-align: center" colspan="1">K6</th>
             <th style="vertical-align: middle;text-align: center" colspan="1">K7</th>
             <th style="vertical-align: middle;text-align: center" colspan="1">K8</th>
-            {{-- <th style="vertical-align: middle;text-align: center" rowspan="2">HPA</th>
-            <th style="vertical-align: middle;text-align: center" rowspan="2">PRE</th> --}}
+            <th style="vertical-align: middle;text-align: center" rowspan="2">HPA</th>
+            <th style="vertical-align: middle;text-align: center" rowspan="2">PRE</th>
             <th style="vertical-align: middle;text-align: center" rowspan="2">Deskripsi Otomatis</th>
             <th style="vertical-align: middle;text-align: center" rowspan="2">Aksi</th>
         </tr>
@@ -71,8 +71,8 @@
                 <td>{{ $k->k6 }}</td>
                 <td>{{ $k->k7 }}</td>
                 <td>{{ $k->k8 }}</td>
-                {{-- <td>{{ $k->HPA }}</td> --}}
-                {{-- <td>{{ $k->PRE }}</td> --}}
+                <td>{{ $k->hpa }}</td>
+                <td>{{ $k->pre }}</td>
                 <td>{{ $k->deskripsi }}</td>
                 <td style="text-align: center;">
                     <button type="button" data-toggle="modal" data-target="#ModalEdit{{ $k->id }}"
@@ -108,73 +108,73 @@
                                 <div class="mb-3">
                                     <label for="exampleInputPassword1" class="form-label">NISN</label>
                                     <input type="text" class="form-control" minlength="10" autocomplete="off"
-                                        name="nisn" value="{{ $k->NISN }}" required />
+                                        name="nisn" value="{{ $k->NISN }}"  />
                                 </div>
                                 <div class="mb-3">
                                     <label for="exampleInputEmail1" class="form-label">Nama</label>
                                     <input type="text" class="form-control" autocomplete="off" name="nama"
-                                        value="{{ $k->nama }}" required />
+                                        value="{{ $k->nama }}"  />
                                 </div>
                                 
                                 {{-- <div class="mb-3">
                                     <label for="exampleInputPassword1"  class="form-label">Jenis Kelamin</label>
                                     <input type="text" minlength="1" maxlength="1"  class="form-control" autocomplete="off"
-                                        name="jk" value="{{ $k->JK }}" required />
+                                        name="jk" value="{{ $k->JK }}"  />
                                 </div> --}}
                                 <div class="mb-3">
                                     <label for="exampleInputPassword1" class="form-label">K-1 [1]</label>
                                     <input type="number" minlength="" maxlength="3" class="form-control" autocomplete="off"
-                                        name="k1" value="{{ $k->k1 }}" required />
+                                        name="k1" value="{{ $k->k1 }}"  />
                                 </div>
                                 <div class="mb-3">
                                     <label for="exampleInputPassword1" class="form-label">K-2 [1]</label>
                                     <input type="number" minlength="" maxlength="3" class="form-control" autocomplete="off"
-                                        name="k2" value="{{ $k->k2 }}" required />
+                                        name="k2" value="{{ $k->k2 }}"  />
                                 </div>
                                 <div class="mb-3">
                                     <label for="exampleInputPassword1" class="form-label">K-3 [1]</label>
                                     <input type="number" minlength="" maxlength="3" class="form-control" autocomplete="off"
-                                        name="k3" value="{{ $k->k3 }}" required />
+                                        name="k3" value="{{ $k->k3 }}"  />
                                 </div>
                                 <div class="mb-3">
                                     <label for="exampleInputPassword1" class="form-label">K-4 [1]</label>
                                     <input type="number" minlength="" maxlength="3" class="form-control" autocomplete="off"
-                                        name="k4" value="{{ $k->k4 }}" required />
+                                        name="k4" value="{{ $k->k4 }}"  />
                                 </div>
                                 <div class="mb-3">
                                     <label for="exampleInputPassword1" class="form-label">K-5 [1]</label>
                                     <input type="number" minlength="" maxlength="3" class="form-control" autocomplete="off"
-                                        name="k5" value="{{ $k->k5 }}" required />
+                                        name="k5" value="{{ $k->k5 }}"  />
                                 </div>
                                 <div class="mb-3">
                                     <label for="exampleInputPassword1" class="form-label">K-6 [1]</label>
                                     <input type="number" minlength="" maxlength="3" class="form-control" autocomplete="off"
-                                        name="k6" value="{{ $k->k6 }}" required />
+                                        name="k6" value="{{ $k->k6 }}"  />
                                 </div>
                                 <div class="mb-3">
                                     <label for="exampleInputPassword1" class="form-label">K-7 [1]</label>
                                     <input type="number" minlength="" maxlength="3" class="form-control" autocomplete="off"
-                                        name="k7" value="{{ $k->k7 }}" required />
+                                        name="k7" value="{{ $k->k7 }}"  />
                                 </div>
                                 <div class="mb-3">
                                     <label for="exampleInputPassword1" class="form-label">K-8 [1]</label>
                                     <input type="number" minlength="" maxlength="3" class="form-control" autocomplete="off"
-                                        name="k8" value="{{ $k->k8 }}" required />
+                                        name="k8" value="{{ $k->k8 }}"  />
                                 </div>
-                                {{-- <div class="mb-3">
+                                <div class="mb-3">
                                     <label for="exampleInputPassword1" class="form-label">HPA</label>
                                     <input type="number" minlength="" class="form-control" autocomplete="off"
-                                        name="hpa" value="{{ $k->HPA }}" required />
-                                </div> --}}
-                                {{-- <div class="mb-3">
+                                        name="hpa" value="{{ $k->hpa }}"  />
+                                </div>
+                                <div class="mb-3">
                                     <label for="exampleInputPassword1" class="form-label">PRE</label>
                                     <input type="text" minlength="" class="form-control" autocomplete="off"
-                                        name="pre" value="{{ $k->PRE }}" required />
-                                </div> --}}
+                                        name="pre" value="{{ $k->pre }}"  />
+                                </div>
                                 <div class="mb-3">
                                     <label for="exampleInputPassword1" class="form-label">Deskripsi</label>
                                     <input type="text" minlength="" class="form-control" autocomplete="off"
-                                        name="deskripsi" value="{{ $k->deskripsi }}" required />
+                                        name="deskripsi" value="{{ $k->deskripsi }}"  />
                                 </div>
                             </div>
                             <div class="modal-footer">
@@ -218,56 +218,55 @@
                 </div> --}}
                 <div class="mb-3">
                     <label class="form-label">K-1 [1]</label>
-                    <input type="number" class="form-control" name="k1" id="k1" oninput="HPA();">
+                    <input type="number" class="form-control" name="k1" id="k1" >
                 </div>
                 <div class="mb-3">
                     <label for="exampleInputPassword1" class="form-label">K-2 [1]</label>
-                    <input type="number" minlength="" maxlength="3" class="form-control" autocomplete="off" name="k2"
-                        required />
+                    <input type="number" minlength="" maxlength="3" class="form-control" autocomplete="off" name="k2" />
                 </div>
                 <div class="mb-3">
                     <label for="exampleInputPassword1" class="form-label">K-3 [1]</label>
                     <input type="number" minlength="" maxlength="3" class="form-control" autocomplete="off" name="k3"
-                        required />
+                         />
                 </div>
                 <div class="mb-3">
                     <label for="exampleInputPassword1" class="form-label">K-4 [1]</label>
                     <input type="number" minlength="" maxlength="3" class="form-control" autocomplete="off" name="k4"
-                        required />
+                         />
                 </div>
                 <div class="mb-3">
                     <label for="exampleInputPassword1" class="form-label">K-5 [1]</label>
                     <input type="number" minlength="" maxlength="3" class="form-control" autocomplete="off" name="k5"
-                        required />
+                         />
                 </div>
                 <div class="mb-3">
                     <label for="exampleInputPassword1" class="form-label">K-6 [1]</label>
                     <input type="number" minlength="" maxlength="3" class="form-control" autocomplete="off" name="k6"
-                        required />
+                         />
                 </div>
                 <div class="mb-3">
                     <label for="exampleInputPassword1" class="form-label">K-7 [1]</label>
                     <input type="number" minlength="" maxlength="3" class="form-control" autocomplete="off" name="k7"
-                        required />
+                         />
                 </div>
                 <div class="mb-3">
                     <label for="exampleInputPassword1" class="form-label">K-8 [1]</label>
                     <input type="number" minlength="" maxlength="3" class="form-control" autocomplete="off" name="k8"
-                        required />
+                         />
                 </div>
                 <div class="mb-3">
                     <label class="form-label">HPA</label>
-                    <input type="text" class="form-control" name="hpa" id="hpa" readonly>
+                    <input type="text" minlength="" class="form-control" name="hpa" id="hpa" >
                 </div>
-                {{-- <div class="mb-3">
+                <div class="mb-3">
                     <label for="exampleInputPassword1" class="form-label">PRE</label>
                     <input type="text" minlength="" class="form-control" autocomplete="off" name="pre"
-                        required />
-                </div> --}}
+                         />
+                </div>
                 <div class="mb-3">
                     <label for="exampleInputPassword1" class="form-label">Deskripsi</label>
                     <input type="text" minlength="" class="form-control" autocomplete="off" name="deskripsi"
-                        required />
+                         />
                 </div>
             </div>
             <div class="modal-footer">
@@ -280,14 +279,17 @@
 
 @push('js')
 
-<script>
-    function(){
+{{-- <script>
+    function HPA(){
         var k1 = document.getElementById('k1').value;
-        var kali = parseInt(k1) * 3;
+        var k2 = document.getElementById('k2').value;
+        var hpa1 = (parseInt(k1)+parseInt(k2));
 
-        document.getElementById('hpa') = kali.toFixed(0);
+        if (!isNan(hpa1)){
+            document.getElementById('hpa').value = hpa1.toFixed(0);
+        }
     }
-</script>
+</script> --}}
     {{-- <script>
         $(document).ready(function() {
             $('#ModalEdit{{ $k->NISN }}').modal('show');

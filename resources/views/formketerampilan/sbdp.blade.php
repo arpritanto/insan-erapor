@@ -71,8 +71,8 @@
                 <td>{{ $k->k6 }}</td>
                 <td>{{ $k->k7 }}</td>
                 <td>{{ $k->k8 }}</td>
-                {{-- <td>{{ $k->HPA }}</td>
-                <td>{{ $k->PRE }}</td> --}}
+                <td>{{ $k->hpa }}</td>
+                <td>{{ $k->pre }}</td>
                 <td>{{ $k->deskripsi }}</td>
                 <td style="text-align: center;">
                     <button type="button" data-toggle="modal" data-target="#ModalEdit{{ $k->id }}"
@@ -161,16 +161,16 @@
                                     <input type="number" minlength="" maxlength="3" class="form-control" autocomplete="off"
                                         name="k8" value="{{ $k->k8 }}" required />
                                 </div>
-                                {{-- <div class="mb-3">
+                                <div class="mb-3">
                                     <label for="exampleInputPassword1" class="form-label">HPA</label>
                                     <input type="number" minlength="" class="form-control" autocomplete="off"
-                                        name="hpa" value="{{ $k->HPA }}" required />
-                                </div> --}}
-                                {{-- <div class="mb-3">
+                                        name="hpa" value="{{ $k->hpa }}" required />
+                                </div>
+                                <div class="mb-3">
                                     <label for="exampleInputPassword1" class="form-label">PRE</label>
                                     <input type="text" minlength="" class="form-control" autocomplete="off"
-                                        name="pre" value="{{ $k->PRE }}" required />
-                                </div> --}}
+                                        name="pre" value="{{ $k->pre }}" required />
+                                </div>
                                 <div class="mb-3">
                                     <label for="exampleInputPassword1" class="form-label">Deskripsi</label>
                                     <input type="text" minlength="" class="form-control" autocomplete="off"
@@ -256,16 +256,16 @@
                     <input type="number" minlength="" maxlength="3" class="form-control" autocomplete="off" name="k8"
                         required />
                 </div>
-                {{-- <div class="mb-3">
+                <div class="mb-3">
                     <label for="exampleInputPassword1" class="form-label">HPA</label>
                     <input type="number" minlength=""  class="form-control" autocomplete="off" name="hpa"
                         required />
-                </div> --}}
-                {{-- <div class="mb-3">
+                </div>
+                <div class="mb-3">
                     <label for="exampleInputPassword1" class="form-label">PRE</label>
                     <input type="text" minlength="" class="form-control" autocomplete="off" name="pre"
                         required />
-                </div> --}}
+                </div>
                 <div class="mb-3">
                     <label for="exampleInputPassword1" class="form-label">Deskripsi</label>
                     <input type="text" minlength="" class="form-control" autocomplete="off" name="deskripsi"

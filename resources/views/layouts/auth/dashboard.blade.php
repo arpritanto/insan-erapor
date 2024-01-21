@@ -37,13 +37,15 @@
             <!-- Sidebar - Brand -->
             <a class="sidebar-brand d-flex align-items-center justify-content-center" href="">
                 <div class="sidebar-brand-icon">
-                    <img style="width: 50%;height: 50%" src="img/logobg.png" alt="logo">
+                    <hr class="sidebar-divider my-3">
+                    <img style="width: 45%;height: 45%" src="img/logobg.png" alt="logo">
+                    
                 </div>
-                <div class="sidebar-brand-text mx-3">SD INSAN MULIA </div>
+                {{-- <div class="sidebar-brand-text mx-3">SD INSAN MULIA </div> --}}
             </a>
 
             <!-- Divider -->
-            <hr class="sidebar-divider my-0">
+            <hr class="sidebar-divider my-2">
 
             <!-- Nav Item - Dashboard -->
             <li class="nav-item">
@@ -56,9 +58,9 @@
             <hr class="sidebar-divider">
 
              <!-- Heading -->
-             <div class="sidebar-heading">
+             {{-- <div class="sidebar-heading">
                  Addons
-             </div>
+             </div> --}}
  
              <!-- Nav Item - Tables -->
             <li class="nav-item active">
@@ -127,13 +129,7 @@
                     <form
                         class="d-none d-sm-inline-block form-inline mr-auto ml-md-3 my-2 my-md-0 mw-100 navbar-search">
                         <div class="input-group">
-                            <input type="text" class="form-control bg-light border-0 small" placeholder="Search for..."
-                                aria-label="Search" aria-describedby="basic-addon2">
-                            <div class="input-group-append">
-                                <button class="btn btn-primary" type="button">
-                                    <i class="fas fa-search fa-sm"></i>
-                                </button>
-                            </div>
+                            <div class="sidebar-brand-text mx-3">SD INSAN MULIA </div>
                         </div>
                     </form>
 

@@ -29,7 +29,7 @@
             <th style="vertical-align: middle;text-align: center" rowspan="2">Nama</th>
             <th style="vertical-align: middle;text-align: center" rowspan="2">NIS/NISN</th>
             <th style="vertical-align: middle;text-align: center" colspan="8">Penilaian Harian</th>
-            <th style="vertical-align: middle;text-align: center" colspan="1">RPH</th>
+            {{-- <th style="vertical-align: middle;text-align: center" colspan="1">RPH</th> --}}
             <th style="vertical-align: middle;text-align: center" colspan="1">PTS</th>
             <th style="vertical-align: middle;text-align: center" colspan="1">PAS</th>
             <th style="vertical-align: middle;text-align: center" rowspan="2">HPA</th>
@@ -47,7 +47,7 @@
             <th style="vertical-align: middle;text-align: center">H6</th>
             <th style="vertical-align: middle;text-align: center">H7</th>
             <th style="vertical-align: middle;text-align: center">H8</th>
-            <th style="vertical-align: middle;text-align: center">2</th>
+            {{-- <th style="vertical-align: middle;text-align: center">2</th> --}}
             <th style="vertical-align: middle;text-align: center">1</th>
             <th style="vertical-align: middle;text-align: center">1</th>
         </tr>
@@ -67,11 +67,11 @@
                 <td>{{ $p->h6 }}</td>
                 <td>{{ $p->h7 }}</td>
                 <td>{{ $p->h8 }}</td>
-                <td>0</td>
+                {{-- <td>0</td> --}}
                 <td>{{ $p->pts }}</td>
                 <td>{{ $p->pas }}</td>
-                <td>0</td>
-                <td>A</td>
+                <td>{{ $p->hpa }}</td>
+                <td>{{ $p->pre }}</td>
                 <td>{{ $p->deskripsi }}</td>
                 <td style="text-align: center;">
                     <button type="button" data-toggle="modal" data-target="#ModalEdit{{ $p->id }}"
@@ -114,72 +114,72 @@
                                 <div class="mb-3">
                                     <label for="exampleInputPassword1" class="form-label">H-1</label>
                                     <input type="number" minlength="" maxlength="3" class="form-control" autocomplete="off"
-                                        name="H1" value="{{ $p->h1 }}" required />
+                                        name="H1" value="{{ $p->h1 }}"  />
                                 </div>
                                 <div class="mb-3">
                                     <label for="exampleInputPassword1" class="form-label">H-2</label>
                                     <input type="number" minlength="" maxlength="3" class="form-control" autocomplete="off"
-                                        name="H2" value="{{ $p->h2 }}" required />
+                                        name="H2" value="{{ $p->h2 }}"  />
                                 </div>
                                 <div class="mb-3">
                                     <label for="exampleInputPassword1" class="form-label">H-3</label>
                                     <input type="number" minlength="" maxlength="3" class="form-control" autocomplete="off"
-                                        name="H3" value="{{ $p->h3 }}" required />
+                                        name="H3" value="{{ $p->h3 }}"  />
                                 </div>
                                 <div class="mb-3">
                                     <label for="exampleInputPassword1" class="form-label">H-4</label>
                                     <input type="number" minlength="" maxlength="3" class="form-control" autocomplete="off"
-                                        name="H4" value="{{ $p->h4 }}" required />
+                                        name="H4" value="{{ $p->h4 }}"  />
                                 </div>
                                 <div class="mb-3">
                                     <label for="exampleInputPassword1" class="form-label">H-5</label>
                                     <input type="number" minlength="" maxlength="3" class="form-control" autocomplete="off"
-                                        name="H5" value="{{ $p->h5 }}" required />
+                                        name="H5" value="{{ $p->h5 }}"  />
                                 </div>
                                 <div class="mb-3">
                                     <label for="exampleInputPassword1" class="form-label">H-6</label>
                                     <input type="number" minlength="" maxlength="3" class="form-control" autocomplete="off"
-                                        name="H6" value="{{ $p->h6 }}" required />
+                                        name="H6" value="{{ $p->h6 }}"  />
                                 </div>
                                 <div class="mb-3">
                                     <label for="exampleInputPassword1" class="form-label">H-7</label>
                                     <input type="number" minlength="" maxlength="3" class="form-control" autocomplete="off"
-                                        name="H7" value="{{ $p->h7 }}" required />
+                                        name="H7" value="{{ $p->h7 }}"  />
                                 </div>
                                 <div class="mb-3">
                                     <label for="exampleInputPassword1" class="form-label">H-8</label>
                                     <input type="number" minlength="" maxlength="3" class="form-control" autocomplete="off"
-                                        name="H8" value="{{ $p->h8 }}" required />
+                                        name="H8" value="{{ $p->h8 }}"  />
                                 </div>
                                 {{-- <div class="mb-3">
                                     <label for="exampleInputPassword1" class="form-label">RPH [2]</label>
                                     <input type="number" minlength="" maxlength="3" class="form-control" autocomplete="off"
-                                        name="rph" value="{{ $p->RPH }}" required />
+                                        name="rph" value="{{ $p->RPH }}"  />
                                 </div> --}}
                                 <div class="mb-3">
                                     <label for="exampleInputPassword1" class="form-label">PTS [1]</label>
                                     <input type="number" minlength="" maxlength="3" class="form-control" autocomplete="off"
-                                        name="pts" value="{{ $p->pts }}" required />
+                                        name="pts" value="{{ $p->pts }}"  />
                                 </div>
                                 <div class="mb-3">
                                     <label for="exampleInputPassword1" class="form-label">PAS [1]</label>
                                     <input type="number" minlength="" maxlength="3" class="form-control" autocomplete="off"
-                                        name="pas" value="{{ $p->pas }}" required />
+                                        name="pas" value="{{ $p->pas }}"  />
                                 </div>
-                                {{-- <div class="mb-3">
+                                <div class="mb-3">
                                     <label for="exampleInputPassword1" class="form-label">HPA</label>
                                     <input type="number" minlength="" class="form-control" autocomplete="off"
-                                        name="hpa" value="{{ $p->hpa }}" required />
-                                </div> --}}
-                                {{-- <div class="mb-3">
+                                        name="hpa" value="{{ $p->hpa }}"  />
+                                </div>
+                                <div class="mb-3">
                                     <label for="exampleInputPassword1" class="form-label">PRE</label>
                                     <input type="text" minlength="" class="form-control" autocomplete="off"
-                                        name="pre" value="{{ $p->pre }}" required />
-                                </div> --}}
+                                        name="pre" value="{{ $p->pre }}"  />
+                                </div>
                                 <div class="mb-3">
                                     <label for="exampleInputPassword1" class="form-label">Deskripsi</label>
                                     <input type="text" minlength="" class="form-control" autocomplete="off"
-                                        name="deskripsi" value="{{ $p->deskripsi }}" required />
+                                        name="deskripsi" value="{{ $p->deskripsi }}"  />
                                 </div>
                             </div>
                             <div class="modal-footer">
@@ -208,67 +208,77 @@
             <div class="modal-body">
                 <div class="mb-3">
                     <label for="exampleInputEmail1" class="form-label">Nama</label>
-                    <input type="text" class="form-control" autocomplete="off" name="nama" required />
+                    <input type="text" class="form-control" autocomplete="off" name="nama"  />
                 </div>
                 <div class="mb-3">
                     <label for="exampleInputPassword1" class="form-label">NISN</label>
                     <input type="text" class="form-control" minlength="10" autocomplete="off" name="nisn"
-                        required />
+                         />
                 </div>
                 <div class="mb-3">
                     <label for="exampleInputPassword1" class="form-label">H-1</label>
                     <input type="number" minlength="" maxlength="3" class="form-control" autocomplete="off" name="H1"
-                        required />
+                         />
                 </div>
                 <div class="mb-3">
                     <label for="exampleInputPassword1" class="form-label">H-2</label>
                     <input type="number" minlength="" maxlength="3" class="form-control" autocomplete="off" name="H2"
-                        required />
+                         />
                 </div>
                 <div class="mb-3">
                     <label for="exampleInputPassword1" class="form-label">H-3</label>
                     <input type="number" minlength="" maxlength="3" class="form-control" autocomplete="off" name="H3"
-                        required />
+                         />
                 </div>
                 <div class="mb-3">
                     <label for="exampleInputPassword1" class="form-label">H-4</label>
                     <input type="number" minlength="" maxlength="3" class="form-control" autocomplete="off" name="H4"
-                        required />
+                         />
                 </div>
                 <div class="mb-3">
                     <label for="exampleInputPassword1" class="form-label">H-5</label>
                     <input type="number" minlength="" maxlength="3" class="form-control" autocomplete="off" name="H5"
-                        required />
+                         />
                 </div>
                 <div class="mb-3">
                     <label for="exampleInputPassword1" class="form-label">H-6</label>
                     <input type="number" minlength="" maxlength="3" class="form-control" autocomplete="off" name="H6"
-                        required />
+                         />
                 </div>
                 <div class="mb-3">
                     <label for="exampleInputPassword1" class="form-label">H-7</label>
                     <input type="number" minlength="" maxlength="3" class="form-control" autocomplete="off" name="H7"
-                        required />
+                         />
                 </div>
                 <div class="mb-3">
                     <label for="exampleInputPassword1" class="form-label">H-8</label>
                     <input type="number" minlength="" maxlength="3" class="form-control" autocomplete="off" name="H8"
-                        required />
+                         />
                 </div>
                 <div class="mb-3">
                     <label for="exampleInputPassword1" class="form-label">PTS [1]</label>
                     <input type="number" minlength="" maxlength="3" class="form-control" autocomplete="off" name="pts"
-                        required />
+                         />
                 </div>
                 <div class="mb-3">
                     <label for="exampleInputPassword1" class="form-label">PAS [1]</label>
                     <input type="number" minlength="" maxlength="3" class="form-control" autocomplete="off" name="pas"
-                        required />
+                         />
+                </div>
+                <div class="mb-3">
+                    <label for="exampleInputPassword1" class="form-label">HPA</label>
+                    <input type="number" minlength=""  class="form-control" autocomplete="off" name="hpa"
+                         />
+                </div>
+                <div class="mb-3">
+                    <label for="exampleInputPassword1" class="form-label">PRE</label>
+                    <input type="text" minlength="" class="form-control" autocomplete="off" name="pre"
+                         />
                 </div>
                 <div class="mb-3">
                     <label for="exampleInputPassword1" class="form-label">Deskripsi</label>
                     <input type="text" minlength="" class="form-control" autocomplete="off" name="deskripsi"
-                        required />
+                         />
                 </div>
             </div>
             <div class="modal-footer">
