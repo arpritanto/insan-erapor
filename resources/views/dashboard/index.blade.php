@@ -4,22 +4,6 @@
 @section('dropdown')
     <h6 class="m-0 font-weight-bold text-primary">Tabel Siswa</h6>
     <div class="dropright mb-4">
-        <button class="btn btn-primary dropdown-toggle" type="button"
-            id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true"
-            aria-expanded="false">
-            Pilih Tabel
-        </button>
-        <div class="dropdown-menu animated--fade-in"
-            aria-labelledby="dropdownMenuButton">
-            <a class="dropdown-item" href="#">PAI</a>
-            <a class="dropdown-item" href="#">PPKN</a>
-            <a class="dropdown-item" href="#">B.IND</a>
-            <a class="dropdown-item" href="#">MAT</a>
-            <a class="dropdown-item" href="#">IPA</a>
-            <a class="dropdown-item" href="#">IPS</a>
-            <a class="dropdown-item" href="#">SBdP</a>
-            <a class="dropdown-item" href="#">PJOK</a>
-        </div>
         <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#ModalTambah">Tambah Data</button>
     </div>
 @endsection
