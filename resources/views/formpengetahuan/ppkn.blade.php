@@ -2,7 +2,7 @@
 
 @section('dropdown')
     <h6 class="m-0 font-weight-bold text-primary">Tabel Data Pengetahuan</h6>
-    <h6 class="m-0 font-weight-bold text-primary">Mata Pelajaran PAI</h6>
+    <h6 class="m-0 font-weight-bold text-primary">Mata Pelajaran PPKN</h6>
     <div class="dropright mb-4">
         <button class="btn btn-primary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown"
             aria-haspopup="true" aria-expanded="false">
@@ -78,7 +78,7 @@
                         style="background: none; border: none; cursor: pointer;">
                         <img src="../img/editbg.png" alt="Edit" style="width: 30px; height: 30px;">
                     </button>
-                    <a href="/pengetahuan_pai/{{ $p->id }}/delete" class="btn btn-danger btn-icon-split">
+                    <a href="/pengetahuan_ppkn/{{ $p->id }}/delete" class="btn btn-danger btn-icon-split">
                         <span class="icon text-white-50">
                             <i class="fas fa-trash"></i>
                         </span>
@@ -89,7 +89,7 @@
             <div class="modal fade" id="ModalEdit{{ $p->id }}" tabindex="-1" role="dialog"
                 aria-labelledby="exampleModalLabel" aria-hidden="true">
                 <div class="modal-dialog" role="document">
-                    <form method="POST" action="{{ url('/pengetahuan_pai/' . $p->id . '/edit') }}" autocomplete="off"
+                    <form method="POST" action="{{ url('/pengetahuan_ppkn/' . $p->id . '/edit') }}" autocomplete="off"
                         class="sign-up-form">
                         @csrf
                         <div class="modal-content">
@@ -195,7 +195,7 @@
 @endsection
 
 @section('add')
-    <form method="POST" action="/pengetahuan_pai/create" autocomplete="off" class="sign-up-form">
+    <form method="POST" action="/pengetahuan_ppkn/create" autocomplete="off" class="sign-up-form">
         @csrf
         <div class="modal-content">
             <div class="modal-header">

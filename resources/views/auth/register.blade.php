@@ -29,72 +29,6 @@
                     <img src="./img/editbg.png" alt="Edit" style="width: 30px; height: 30px;">
                 </button>
 
-                <div class="modal fade" id="ModalEdit{{ $u->id }}" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                    <div class="modal-dialog" role="document">
-                        <form method="POST" action="/register/{{ $u->id }}/update" autocomplete="off" class="sign-up-form">
-                            @csrf
-                            <div class="modal-content">
-                            <div class="modal-header">
-                                <h5 class="modal-title" id="exampleModalLabel">Edit Data</h5>
-                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                <span aria-hidden="true">&times;</span>
-                                </button>
-                            </div>
-                    
-                            <div class="modal-body">
-                                <div class="mb-3">
-                                    <label for="exampleInputEmail1" class="form-label">Nama</label>
-                                    <input
-                                        type="text"
-                                        class="form-control @error('name') is-invalid @enderror"
-                                        autocomplete="off"
-                                        id="name"
-                                        name="name"
-                                        value="{{ $u->name }}"
-                                        required/>
-                                </div>
-                                <div class="mb-3">
-                                    <label for="exampleInputPassword1" class="form-label">Email</label>
-                                    <input
-                                        type="text"
-                                        class="form-control @error('email') is-invalid @enderror"
-                                        autocomplete="off"
-                                        id="email" 
-                                        name="email"
-                                        value="{{ $u->email }}"
-                                        required/>
-                                </div>
-                                {{-- <div class="mb-3">
-                                    <label for="exampleInputPassword1" class="form-label">Password</label>
-                                    <input
-                                        type="password"
-                                        class="form-control"
-                                        autocomplete="off"
-                                        id="password" 
-                                        name="password"
-                                        required />
-                                </div>
-                                <div class="mb-3">
-                                    <label for="exampleInputPassword1" class="form-label">Confirm Password</label>
-                                    <input
-                                        type="password"
-                                        class="form-control"
-                                        autocomplete="off"
-                                        id="password_confirmation" 
-                                        name="password_confirmation"
-                                        required
-                                    />
-                                </div> --}}
-                            </div>
-                            <div class="modal-footer">
-                                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                                <button type="submit" value="update" class="btn btn-primary">Simpan</button>
-                            </div>
-                            </div>
-                        </form>
-                    </div>
-                </div>
-
                 <a href="/register/{{ $u->id }}/delete" class="btn btn-danger btn-icon-split">
                 
                     <span class="icon text-white-50">
@@ -104,6 +38,71 @@
                 </a>
             </td>
         </tr>
+        <div class="modal fade" id="ModalEdit{{ $u->id }}" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+                <form method="POST" action="/register/{{ $u->id }}/update" autocomplete="off" class="sign-up-form">
+                    @csrf
+                    <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel">Edit Data</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+            
+                    <div class="modal-body">
+                        <div class="mb-3">
+                            <label for="exampleInputEmail1" class="form-label">Nama</label>
+                            <input
+                                type="text"
+                                class="form-control @error('name') is-invalid @enderror"
+                                autocomplete="off"
+                                id="name"
+                                name="name"
+                                value="{{ $u->name }}"
+                                required/>
+                        </div>
+                        <div class="mb-3">
+                            <label for="exampleInputPassword1" class="form-label">Email</label>
+                            <input
+                                type="text"
+                                class="form-control @error('email') is-invalid @enderror"
+                                autocomplete="off"
+                                id="email" 
+                                name="email"
+                                value="{{ $u->email }}"
+                                required/>
+                        </div>
+                        {{-- <div class="mb-3">
+                            <label for="exampleInputPassword1" class="form-label">Password</label>
+                            <input
+                                type="password"
+                                class="form-control"
+                                autocomplete="off"
+                                id="password" 
+                                name="password"
+                                required />
+                        </div>
+                        <div class="mb-3">
+                            <label for="exampleInputPassword1" class="form-label">Confirm Password</label>
+                            <input
+                                type="password"
+                                class="form-control"
+                                autocomplete="off"
+                                id="password_confirmation" 
+                                name="password_confirmation"
+                                required
+                            />
+                        </div> --}}
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                        <button type="submit" value="update" class="btn btn-primary">Simpan</button>
+                    </div>
+                    </div>
+                </form>
+            </div>
+        </div>
         @endforeach
     </tbody>
 @endsection

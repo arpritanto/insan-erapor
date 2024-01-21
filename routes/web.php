@@ -4,8 +4,15 @@ use App\Http\Controllers\IndexController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Auth\LoginRegisterController;
 use App\Http\Controllers\KeterampilanController;
+use App\Http\Controllers\PenBindoController;
 use App\Http\Controllers\PengetahuanController;
+use App\Http\Controllers\PenIpaController;
+use App\Http\Controllers\PenIpsController;
+use App\Http\Controllers\PenMatController;
 use App\Http\Controllers\PenPaiController;
+use App\Http\Controllers\PenPjokController;
+use App\Http\Controllers\PenPpknController;
+use App\Http\Controllers\PenSbdpController;
 use App\Http\Controllers\SiswaController;
 
 /*
@@ -67,13 +74,52 @@ Route::controller(LoginRegisterController::class)->group(function() {
     // Route::get('/keterampilan/{nisn}/delete',[KeterampilanController::class, 'destroy']);
 
     # PAI
-    Route::get('/pengetahuan',[PenPaiController::class, 'get']);
+    Route::get('/pengetahuan_pai',[PenPaiController::class, 'get']);
     Route::post('/pengetahuan_pai/create',[PenPaiController::class, 'create']);
     Route::post('/pengetahuan_pai/{id}/edit',[PenPaiController::class, 'update']);
     Route::get('/pengetahuan_pai/{id}/delete',[PenPaiController::class, 'destroy']);
 
     #PPKN
-    
+    Route::get('/pengetahuan_ppkn',[PenPpknController::class, 'get']);
+    Route::post('/pengetahuan_ppkn/create',[PenPpknController::class, 'create']);
+    Route::post('/pengetahuan_ppkn/{id}/edit',[PenPpknController::class, 'update']);
+    Route::get('/pengetahuan_ppkn/{id}/delete',[PenPpknController::class, 'destroy']);
+
+    #Bindo
+    Route::get('/pengetahuan_bindo',[PenBindoController::class, 'get']);
+    Route::post('/pengetahuan_bindo/create',[PenBindoController::class, 'create']);
+    Route::post('/pengetahuan_bindo/{id}/edit',[PenBindoController::class, 'update']);
+    Route::get('/pengetahuan_bindo/{id}/delete',[PenBindoController::class, 'destroy']);
+
+    #Mat
+    Route::get('/pengetahuan_mat',[PenMatController::class, 'get']);
+    Route::post('/pengetahuan_mat/create',[PenMatController::class, 'create']);
+    Route::post('/pengetahuan_mat/{id}/edit',[PenMatController::class, 'update']);
+    Route::get('/pengetahuan_mat/{id}/delete',[PenMatController::class, 'destroy']);
+
+    #Ipa
+    Route::get('/pengetahuan_ipa',[PenIpaController::class, 'get']);
+    Route::post('/pengetahuan_ipa/create',[PenIpaController::class, 'create']);
+    Route::post('/pengetahuan_ipa/{id}/edit',[PenIpaController::class, 'update']);
+    Route::get('/pengetahuan_ipa/{id}/delete',[PenIpaController::class, 'destroy']);
+
+    #Ips
+    Route::get('/pengetahuan_ips',[PenIpsController::class, 'get']);
+    Route::post('/pengetahuan_ips/create',[PenIpsController::class, 'create']);
+    Route::post('/pengetahuan_ips/{id}/edit',[PenIpsController::class, 'update']);
+    Route::get('/pengetahuan_ips/{id}/delete',[PenIpsController::class, 'destroy']);
+
+    #Sbdp
+    Route::get('/pengetahuan_sbdp',[PenSbdpController::class, 'get']);
+    Route::post('/pengetahuan_sbdp/create',[PenSbdpController::class, 'create']);
+    Route::post('/pengetahuan_sbdp/{id}/edit',[PenSbdpController::class, 'update']);
+    Route::get('/pengetahuan_sbdp/{id}/delete',[PenSbdpController::class, 'destroy']);
+
+    #Pjok
+    Route::get('/pengetahuan_pjok',[PenPjokController::class, 'get']);
+    Route::post('/pengetahuan_pjok/create',[PenPjokController::class, 'create']);
+    Route::post('/pengetahuan_pjok/{id}/edit',[PenPjokController::class, 'update']);
+    Route::get('/pengetahuan_pjok/{id}/delete',[PenPjokController::class, 'destroy']);
 
     // Route::get('/gfg/{a}', 'gfg')->name('gfg');
 });

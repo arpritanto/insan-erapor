@@ -57,7 +57,7 @@
                 </a>
             </td>
         </tr>
-        <div class="modal fade" id="ModalEdit{{ $s->NISN }}"  role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal fade" id="ModalEdit{{ $s->NISN }}" tabindex="-1"  role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
             <div class="modal-dialog" role="document">
                 <form method="POST" action="{{ url('/dashboard/' . $s->NISN . '/edit') }}" autocomplete="off" class="sign-up-form">
                     @csrf
