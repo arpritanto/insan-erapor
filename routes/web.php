@@ -5,6 +5,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Auth\LoginRegisterController;
 use App\Http\Controllers\KeterampilanController;
 use App\Http\Controllers\PengetahuanController;
+use App\Http\Controllers\PenPaiController;
 use App\Http\Controllers\SiswaController;
 
 /*
@@ -55,13 +56,18 @@ Route::controller(LoginRegisterController::class)->group(function() {
     Route::post('/dashboard/{nisn}/edit',[SiswaController::class, 'update']);
     Route::get('/dashboard/{nisn}/delete',[SiswaController::class, 'destroy']);
 
-    Route::get('/pengetahuan', 'pengetahuan')->name('pengetahuan');
-    Route::post('/pengetahuan/create',[PengetahuanController::class, 'create']);
-    Route::post('/pengetahuan/{nisn}/edit',[PengetahuanController::class, 'update']);
-    Route::get('/pengetahuan/{nisn}/delete',[PengetahuanController::class, 'destroy']);
+    // Route::get('/pengetahuan/{matpel}', 'pengetahuan')->name('pengetahuan');
+    // Route::post('/pengetahuan/create',[PengetahuanController::class, 'create']);
+    // Route::post('/pengetahuan/{nisn}/edit',[PengetahuanController::class, 'update']);
+    // Route::get('/pengetahuan/{nisn}/delete',[PengetahuanController::class, 'destroy']);
 
-    Route::get('/keterampilan', 'keterampilan')->name('keterampilan');
-    Route::post('/keterampilan/create',[KeterampilanController::class, 'create']);
-    Route::post('/keterampilan/{nisn}/edit',[KeterampilanController::class, 'update']);
-    Route::get('/keterampilan/{nisn}/delete',[KeterampilanController::class, 'destroy']);
+    // Route::get('/keterampilan', 'keterampilan')->name('keterampilan');
+    // Route::post('/keterampilan/create',[KeterampilanController::class, 'create']);
+    // Route::post('/keterampilan/{nisn}/edit',[KeterampilanController::class, 'update']);
+    // Route::get('/keterampilan/{nisn}/delete',[KeterampilanController::class, 'destroy']);
+
+    Route::get('/pengetahuan',[PenPaiController::class, 'get']);
+    Route::post('/pengetahuan_pai/create',[PenPaiController::class, 'create']);
+
+    // Route::get('/gfg/{a}', 'gfg')->name('gfg');
 });

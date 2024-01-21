@@ -34,11 +34,18 @@ class LoginRegisterController extends Controller
         return view('layouts.auth.register-1');
     }
 
-    public function pengetahuan()
-    {
-        $pengetahuan = DB::table('pengetahuan')->get();
-        return view('formpengetahuan.index', ['pengetahuan' => $pengetahuan]);
-    }
+    // public function gfg($a)
+    // {
+    //     return view('formpengetahuan.gfg', ['articleName' => $a]);
+    // }
+
+    // public function pengetahuan($pel)
+    // {
+    //     $def = 'pengetahuan';
+    //     $matpel = $pel ?: $def;
+    //     $pengetahuan = DB::table($matpel)->get();
+    //     return view('formpengetahuan.pai', ['pengetahuan' => $pengetahuan]);
+    // }
 
     public function keterampilan()
     {

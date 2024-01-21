@@ -8,14 +8,14 @@
             Pilih Tabel
         </button>
         <div class="dropdown-menu animated--fade-in" aria-labelledby="dropdownMenuButton">
-            <a class="dropdown-item" href="#">PAI</a>
-            <a class="dropdown-item" href="#">PPKN</a>
-            <a class="dropdown-item" href="#">B.IND</a>
-            <a class="dropdown-item" href="#">MAT</a>
-            <a class="dropdown-item" href="#">IPA</a>
-            <a class="dropdown-item" href="#">IPS</a>
-            <a class="dropdown-item" href="#">SBdP</a>
-            <a class="dropdown-item" href="#">PJOK</a>
+            <a class="dropdown-item" href="/pengetahuan/peng_pai">PAI</a>
+            <a class="dropdown-item" href="/pengetahuan/peng_ppkn">PPKN</a>
+            <a class="dropdown-item" href="/pengetahuan/peng_bindo">B.IND</a>
+            <a class="dropdown-item" href="/pengetahuan/peng_mat">MAT</a>
+            <a class="dropdown-item" href="/pengetahuan/peng_ipa">IPA</a>
+            <a class="dropdown-item" href="/pengetahuan/peng_ips">IPS</a>
+            <a class="dropdown-item" href="/pengetahuan/peng_sbdp">SBdP</a>
+            <a class="dropdown-item" href="/pengetahuan/peng_pjok">PJOK</a>
         </div>
         <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#ModalTambah">Tambah Data</button>
     </div>
@@ -34,7 +34,7 @@
             <th style="vertical-align: middle;text-align: center" colspan="1">PAS</th>
             <th style="vertical-align: middle;text-align: center" rowspan="2">HPA</th>
             <th style="vertical-align: middle;text-align: center" rowspan="2">PRE</th>
-            <th style="vertical-align: middle;text-align: center" rowspan="2">Deskripsi Otomatis</th>
+            <th style="vertical-align: middle;text-align: center" rowspan="2">Deskripsi</th>
             <th style="vertical-align: middle;text-align: center" rowspan="2">Aksi</th>
         </tr>
 
@@ -77,7 +77,7 @@
                 <td style="text-align: center;">
                     <button type="button" data-toggle="modal" data-target="#ModalEdit{{ $p->NISN }}"
                         style="background: none; border: none; cursor: pointer;">
-                        <img src="./img/editbg.png" alt="Edit" style="width: 30px; height: 30px;">
+                        <img src="../img/editbg.png" alt="Edit" style="width: 30px; height: 30px;">
                     </button>
                     <a href="/pengetahuan/{{ $p->NISN }}/delete" class="btn btn-danger btn-icon-split">
                         <span class="icon text-white-50">
@@ -201,7 +201,7 @@
 @endsection
 
 @section('add')
-    <form method="POST" action="/pengetahuan/create" autocomplete="off" class="sign-up-form">
+    <form method="POST" action="/pengetahuan_pai/create" autocomplete="off" class="sign-up-form">
         @csrf
         <div class="modal-content">
             <div class="modal-header">
@@ -306,10 +306,10 @@
 @endsection
 
 @push('js')
-<script>
+{{-- <script>
     $(document).ready(function() {
         $('#ModalEdit{{ $p->NISN }}').modal('show');
     });
-</script>
+</script> --}}
     
 @endpush
